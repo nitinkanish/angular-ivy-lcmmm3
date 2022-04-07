@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+
+<p>Some Value outside of loop {{someValue | json}}</p>
+
+<p>similar loop with shared someValue</p>
+<div *ngFor="let card of cardInfo" style="border: 1px solid; padding: 5px;">
+  <p>ID: {{card.id}}</p>
+  <p>Title: {{card.title}}</p>
+  <p>someValue: {{someValue | json}}</p>
+  <button (click)="toggleSomeValue()">Toggle Value</button>
+</div>
+
+<p>Loop of "cards" with their own managed state (the global</p>
+<app-card *ngFor="let card of cardInfo" [card]="card" [stateFromParent]="someValue"></app-card>
+

@@ -1,0 +1,8 @@
+
+<div style="border: 1px solid green; padding: 5px;">
+<p>ID: {{card.id}}</p>
+<p>Title: {{card.title}}</p>
+<p>internalState: {{internalState | json}}</p>
+<p>stateFromParent: {{stateFromParent | json}} (NOTE: it will mange its own internal one, but if the parent's input changes that new value will be passed in)</p>
+<button (click)="toggleInternalState()">Toggle Value</button>
+</div>
